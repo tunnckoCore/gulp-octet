@@ -1,0 +1,47 @@
+{
+  "name": "gulp-octet",
+  "version": "0.0.1",
+  "description": "Gulp plugin for octet - Javascript template engine in just 20 lines.",
+  "scripts": {
+    "start": "make start",
+    "test": "make test"
+  },
+  "author": {
+    "name": "Charlike Mike Reagent",
+    "email": "mameto_100@mail.bg",
+    "url": "http://www.whistle-bg.tk",
+    "twitter": "tunnckoCore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tunnckoCore/gulp-octet.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "javascript",
+    "template",
+    "engine",
+    "abusrdjs",
+    "absurd"
+  ],
+  "files": [
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "index.js",
+    "test.js"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.17",
+    "through2": "~0.5.1",
+    "octet": "~0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "gulp": "*"
+  },
+  "license": "MIT"
+}
