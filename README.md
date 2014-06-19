@@ -17,7 +17,7 @@ $ npm install gulp-octet
 #### `src/greeting.html`
 
 ```html
-<h1>Hello <strike><%this.user.name%></strike></h1>
+<h1>Hello <strike><%this.name%></strike></h1>
 ```
 
 #### `gulpfile.js`
