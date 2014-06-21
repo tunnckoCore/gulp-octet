@@ -1,4 +1,4 @@
-gulp-octet [![Build Status](https://travis-ci.org/tunnckoCore/gulp-octet.png)](https://travis-ci.org/tunnckoCore/gulp-octet) [![Dependencies Status](https://david-dm.org/tunnckoCore/gulp-octet/status.svg)](https://david-dm.org/tunnckoCore/gulp-octet)
+gulp-octet [![Build Status](https://travis-ci.org/tunnckoCore/gulp-octet.png)](https://travis-ci.org/tunnckoCore/gulp-octet) [![Dependencies Status](https://david-dm.org/tunnckoCore/gulp-octet/status.svg)](https://david-dm.org/tunnckoCore/gulp-octet) [![Coverage Status](https://coveralls.io/repos/tunnckoCore/gulp-octet/badge.png?branch=master)](https://coveralls.io/r/tunnckoCore/gulp-octet?branch=master)
 ================
 
 > Compile [octet templates](https://github.com/tunnckoCore/octet). Gulp plugin for octet - Javascript template engine in 140 bytes, by Jed Schmidt.
