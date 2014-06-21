@@ -1,11 +1,11 @@
-gulp-octet [![Build Status](https://travis-ci.org/tunnckoCore/gulp-octet.png)](https://travis-ci.org/tunnckoCore/gulp-octet) [![Dependencies Status](https://david-dm.org/tunnckoCore/koa-better-body/status.svg)](https://david-dm.org/dlau/gulp-octet)
+gulp-octet [![Build Status](https://travis-ci.org/tunnckoCore/gulp-octet.png)](https://travis-ci.org/tunnckoCore/gulp-octet) [![Dependencies Status](https://david-dm.org/tunnckoCore/gulp-octet/status.svg)](https://david-dm.org/tunnckoCore/gulp-octet)
 ================
 
 > Compile [octet templates](https://github.com/tunnckoCore/octet). Gulp plugin for octet - Javascript template engine in 140 bytes, by Jed Schmidt.
 
 
 ## Install
-> Install with [npm](https://github.com/npm/npm)
+> Install [`package/gulp-octet`](http://npm.im/gulp-octet) with [npm](https://npmjs.org)
 
 ```
 $ npm install gulp-octet
@@ -40,7 +40,7 @@ gulp.task('default', function () {
 ```
 
 ## Test, Bench, Example
-> First run `npm install` before run anything.
+> First run `npm install`
 
 ```
 $ npm test
