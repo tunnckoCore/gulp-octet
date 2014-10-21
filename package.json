@@ -1,6 +1,6 @@
 {
   "name": "gulp-octet",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Gulp plugin for octet - Javascript template engine in just 20 lines - used in AbsurdJS",
   "main": "index.js",
   "scripts": {
