@@ -1,5 +1,5 @@
 # gulp-octet [![NPM version][npmjs-shields]][npmjs-url] [![Build Status][travis-img]][travis-url] [![Dependency Status][depstat-img]][depstat-url]
-> Compile [octet templates](https://github.com/tunnckoCore/octet). Gulp plugin for octet - Gulp plugin for octet - Javascript template engine in just 20 lines. Used in AbsurdJS.
+> Compile [octet templates](https://github.com/tunnckoCore/octet). Gulp plugin for octet - Javascript template engine in just 20 lines - used in AbsurdJS
 
 
 ## Install [![Nodei.co stats][npmjs-install]][npmjs-url]
