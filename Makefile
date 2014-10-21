@@ -1,4 +1,3 @@
-REPORTER = spec
 NM = node_modules
 
 clean:
@@ -13,18 +12,16 @@ lint:
 
 test:
 	$(MAKE) lint
-	$(NM)/mocha/bin/mocha \
-		--reporter $(REPORTER)
+	$(NM)/mocha/bin/mocha
 
 cov:
 	$(MAKE) lint
 	$(NM)/.bin/istanbul cover \
-	$(NM)/mocha/bin/_mocha -- --reporter $(REPORTER)
+	$(NM)/mocha/bin/_mocha
 
 coveralls:
 	$(MAKE) test
 	$(NM)/.bin/istanbul cover \
-	$(NM)/mocha/bin/_mocha --report lcovonly -- --reporter $(REPORTER) && \
-		cat ./coverage/lcov.info | $(NM)/coveralls/bin/coveralls.js || true
+	$(NM)/mocha/bin/_mocha --report lcovonly && cat ./coverage/lcov.info | $(NM)/coveralls/bin/coveralls.js || true
 
 .PHONY: test

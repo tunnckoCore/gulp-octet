@@ -1,9 +1,7 @@
 /**
- * gulp-octet - index.js
- * Copyright (c) 2014
- * MIT Licensed
+ * gulp-octet <https://github.com/tunnckoCore/gulp-octet>
  *
- * @author  Charlike Mike Reagent (@tunnckoCore)
- * @api private
+ * Copyright (c) 2014 Charlike Mike Reagent, contributors.
+ * Released under the MIT license.
  */
 module.exports = require('./lib/');

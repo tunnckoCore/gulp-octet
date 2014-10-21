@@ -1,18 +1,18 @@
 /**
- * gulp-octet - test/index.js
- * Copyright (c) 2014
- * MIT Licensed
+ * gulp-octet <https://github.com/tunnckoCore/gulp-octet>
  *
- * @author  Charlike Mike Reagent (@tunnckoCore)
- * @api private
+ * Copyright (c) 2014 Charlike Mike Reagent, contributors.
+ * Released under the MIT license.
  */
+
 'use strict';
+
 var assert = require('assert');
 var gutil = require('gulp-util');
 var gulpOctet = require('../index');
 var user = { name: 'Charlike' };
 
-describe('octet: should compile octet templates', function(){
+describe('octet: should compile octet templates', function () {
   it('should support locals', function (done) {
     var stream = gulpOctet({user: user});
     stream.on('data', function (data) {
