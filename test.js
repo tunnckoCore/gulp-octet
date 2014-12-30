@@ -7,16 +7,15 @@
 
 'use strict';
 
+var gulpOctet = require('./index');
 var assert = require('assert');
 var gutil = require('gulp-util');
-var gulpOctet = require('../index');
-var user = { name: 'Charlike' };
 
-describe('octet: should compile octet templates', function () {
-  it('should support locals', function (done) {
+describe('gulp-octet:', function() {
+  it('should support locals', function(done) {
     var stream = gulpOctet({user: user});
-    stream.on('data', function (data) {
-      assert.equal(data.contents.toString(), '<p>Charlike</p>');
+    stream.on('data', function(data) {
+      assert.strictEqual(data.contents.toString(), '<p>Charlike</p>');
       done();
     });
 
@@ -26,10 +25,16 @@ describe('octet: should compile octet templates', function () {
 
     stream.end();
   });
-  it('should support helpers', function (done) {
-    var stream = gulpOctet({user: user, uppercase: function (str) {return str.toUpperCase();}});
-    stream.on('data', function (data) {
-      assert.equal(data.contents.toString(), '<p>CHARLIKE</p>');
+  it('should support helpers', function(done) {
+    var stream = gulpOctet({
+      user: user,
+      uppercase: function(str) {
+        return str.toUpperCase();
+      }
+    });
+    stream.on('data', function(data) {
+      data = data.contents.toString();
+      assert.strictEqual(data, '<p>CHARLIKE</p>');
       done();
     });
 
