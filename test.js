@@ -10,6 +10,7 @@
 var gulpOctet = require('./index');
 var assert = require('assert');
 var gutil = require('gulp-util');
+var user = {name: 'Charlike'};
 
 describe('gulp-octet:', function() {
   it('should support locals', function(done) {

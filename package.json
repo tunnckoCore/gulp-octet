@@ -1,28 +1,21 @@
 {
   "name": "gulp-octet",
   "version": "1.0.0",
-  "description": "Gulp plugin for octet - Javascript template engine in just 20 lines - used in AbsurdJS",
-  "main": "index.js",
+  "description": "Compile octet templates. Gulp plugin for octet - Javascript template engine in just 20 lines - used in AbsurdJS",
   "scripts": {
-    "lint": "npm install && ./node_modules/jshint/bin/jshint ./lib/*.js ./test/*.js",
-    "test": "npm run lint && ./node_modules/mocha/bin/mocha",
-    "cov": "npm run lint && ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha"
+    "lint": "jshint index.js && jscs index.js --reporter inline",
+    "test": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
   },
   "author": {
     "name": "Charlike Make Reagent",
     "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore",
-    "twitter": "https://twitter.com/tunnckoCore"
+    "url": "https://github.com/tunnckoCore"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/tunnckoCore/gulp-octet.git"
-  },
-  "author": {
-    "name": "Charlike Mike Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore",
-    "twitter": "https://twitter.com/tunnckoCore"
   },
   "keywords": [
     "gulpplugin",
@@ -32,21 +25,18 @@
     "abusrdjs",
     "absurd"
   ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tunnckoCore/gulp-octet/blob/master/license.md"
+  },
   "dependencies": {
-    "gulp-util": "~3.0.1",
-    "through2": "~0.6.3",
-    "octet": "~0.0.2",
-    "mocha-lcov-reporter": "0.0.1"
+    "gulp-util": "*",
+    "through2": "*",
+    "octet": "*"
   },
   "devDependencies": {
-    "coveralls": "*",
-    "istanbul": "*",
-    "jshint": "*",
+    "istanbul-harmony": "^0.3.1",
     "mocha": "*",
-    "gulp": "*"
-  },
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/pkg-open/blob/master/license.md"
-  }]
+    "mocha-lcov-reporter": "^0.0.1"
+  }
 }
