@@ -1,24 +1,22 @@
-# gulp-octet [![NPM version][npmjs-shields]][npmjs-url] [![Build Status][travis-img]][travis-url] [![Dependency Status][depstat-img]][depstat-url]
-> Compile [octet templates](https://github.com/tunnckoCore/octet). Gulp plugin for octet - Javascript template engine in just 20 lines - used in AbsurdJS
+## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
+> Compile [octet templates](https://github.com/tunnckoCore/octet). [Gulp](http://gulpjs.com) plugin for octet - Javascript template engine in just 20 lines - used in [AbsurdJS](http://absurdjs.com)
 
-## Install [![Nodei.co stats][npmjs-install]][npmjs-url]
-> Install with [npm](https://npmjs.org)
-
-```
-$ npm install gulp-octet
+## Install
+```bash
+npm install gulp-octet
+npm test
 ```
 
 
 ## Usage
+> For more use-cases see the [tests](./test.js)
 
-##### src/greeting.html
-
+**src/greeting.html**
 ```html
 <h1>Hello <strike><%this.name%></strike></h1>
 ```
-
-##### gulpfile.js
+**gulpfile.js**
 
 ```js
 var gulp = require('gulp');
@@ -30,74 +28,49 @@ gulp.task('default', function () {
     .pipe(gulp.dest('dist'));
 });
 ```
-
-##### dist/greeting.html
-
+**dist/greeting.html**
 ```html
 <h1>Hello <strike>Charlike</strike></h1>
 ```
 
 
-## Mocha (test), Istanbul (coverage), JSHint (lint)
-> You can run it through `npm run`
-
-```
-$ npm test
-$ npm run cov
-$ npm run lint
-```
-or through `make` file
-```
-$ make test
-$ make cov
-$ make lint
-```
-
-
-## Authors & Contributors [![author tips][author-gittip-img]][author-gittip]
-
+## Author
 **Charlike Mike Reagent**
-+ [gittip/tunnckoCore][author-gittip]
-+ [github/tunnckoCore][author-github]
++ [gratipay/tunnckoCore][author-gratipay]
 + [twitter/tunnckoCore][author-twitter]
++ [github/tunnckoCore][author-github]
 + [npmjs/tunnckoCore][author-npmjs]
++ [more ...][contrib-more]
 
 
 ## License [![MIT license][license-img]][license-url]
-Copyright (c) 2014 [Charlike Mike Reagent][author-website], [contributors](https://github.com/tunnckoCore/gulp-octet/graphs/contributors).  
+Copyright (c) 2014 [Charlike Mike Reagent][contrib-more], [contributors][contrib-graf].  
 Released under the [`MIT`][license-url] license.
 
 
-
 [npmjs-url]: http://npm.im/gulp-octet
-[npmjs-shields]: http://img.shields.io/npm/v/gulp-octet.svg
-[npmjs-install]: https://nodei.co/npm/gulp-octet.svg?mini=true
+[npmjs-img]: https://img.shields.io/npm/v/gulp-octet.svg?style=flat&label=gulp-octet
+
+[coveralls-url]: https://coveralls.io/r/tunnckoCore/gulp-octet?branch=master
+[coveralls-img]: https://img.shields.io/coveralls/tunnckoCore/gulp-octet.svg?style=flat
 
 [license-url]: https://github.com/tunnckoCore/gulp-octet/blob/master/license.md
-[license-img]: http://img.shields.io/badge/license-MIT-blue.svg
+[license-img]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 
 [travis-url]: https://travis-ci.org/tunnckoCore/gulp-octet
-[travis-img]: https://travis-ci.org/tunnckoCore/gulp-octet.svg?branch=master
+[travis-img]: https://img.shields.io/travis/tunnckoCore/gulp-octet.svg?style=flat
 
-[depstat-url]: https://david-dm.org/tunnckoCore/gulp-octet
-[depstat-img]: https://david-dm.org/tunnckoCore/gulp-octet.svg
+[daviddm-url]: https://david-dm.org/tunnckoCore/gulp-octet
+[daviddm-img]: https://img.shields.io/david/tunnckoCore/gulp-octet.svg?style=flat
 
-[author-gittip-img]: http://img.shields.io/gittip/tunnckoCore.svg
-[author-gittip]: https://www.gittip.com/tunnckoCore
-[author-github]: https://github.com/tunnckoCore
+[author-gratipay]: https://gratipay.com/tunnckoCore
 [author-twitter]: https://twitter.com/tunnckoCore
-
-[author-website]: http://www.whistle-bg.tk
+[author-github]: https://github.com/tunnckoCore
 [author-npmjs]: https://npmjs.org/~tunnckocore
 
-[cobody-url]: https://github.com/visionmedia/co-body
-[mocha-url]: https://github.com/visionmedia/mocha
-[rawbody-url]: https://github.com/stream-utils/raw-body
-[multer-url]: https://github.com/expressjs/multer
-[koa-router-url]: https://github.com/alexmingoia/koa-router
-[koa-url]: https://github.com/koajs/koa
-[formidable-url]: https://github.com/felixge/node-formidable
-[co-url]: https://github.com/visionmedia/co
-[extend-url]: https://github.com/justmoon/node-extend
-[npmrepo]: https://github.com/repo-utils/npm-repo
-[sindreopn]: https://github.com/sindresorhus/opn
+[contrib-more]: http://j.mp/1stW47C
+[contrib-graf]: https://github.com/tunnckoCore/gulp-octet/graphs/contributors
+
+***
+
+_Powered and automated by [readdirp + hogan.js](https://github.com/tunnckoCore), December 30, 2014_
