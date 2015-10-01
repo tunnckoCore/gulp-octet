@@ -1,6 +1,6 @@
 {
   "name": "gulp-octet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gulp plugin for `octet` - 1kb template engine. Support helpers, partials and more. Used in AbsurdJS apps.",
   "repository": "tunnckoCore/gulp-octet",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
