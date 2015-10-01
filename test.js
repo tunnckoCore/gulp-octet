@@ -1,48 +1,61 @@
-/**
+/*!
  * gulp-octet <https://github.com/tunnckoCore/gulp-octet>
  *
- * Copyright (c) 2014 Charlike Mike Reagent, contributors.
+ * Copyright (c) 2014-2015 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
  * Released under the MIT license.
  */
 
-'use strict';
+/* jshint asi:true */
 
-var gulpOctet = require('./index');
-var assert = require('assert');
-var gutil = require('gulp-util');
-var user = {name: 'Charlike'};
+'use strict'
 
-describe('gulp-octet:', function() {
-  it('should support locals', function(done) {
-    var stream = gulpOctet({user: user});
-    stream.on('data', function(data) {
-      assert.strictEqual(data.contents.toString(), '<p>Charlike</p>');
-      done();
-    });
+var fs = require('fs')
+var test = require('assertit')
+var gutil = require('gulp-util')
+var octet = require('./index')
 
-    stream.write(new gutil.File({
-      contents: new Buffer('<p><%this.user.name%></p>')
-    }));
+function plugin (file, onerror) {
+  var stream = octet({
+    place: 'world',
+    user: {
+      name: 'Charlike'
+    }
+  })
+  stream.once('error', onerror)
+  stream.write(file)
+  return stream
+}
 
-    stream.end();
-  });
-  it('should support helpers', function(done) {
-    var stream = gulpOctet({
-      user: user,
-      uppercase: function(str) {
-        return str.toUpperCase();
-      }
-    });
-    stream.on('data', function(data) {
-      data = data.contents.toString();
-      assert.strictEqual(data, '<p>CHARLIKE</p>');
-      done();
-    });
+test('should render file with locals', function (done) {
+  var stream = plugin(new gutil.File({
+    base: __dirname,
+    path: __dirname + '/fixture.txt',
+    contents: new Buffer('Hello <%this.place%> and <%this.user.name%>!')
+  }), done)
 
-    stream.write(new gutil.File({
-      contents: new Buffer('<p><%this.uppercase(this.user.name)%></p>')
-    }));
+  stream.once('data', function (file) {
+    test.strictEqual(file.contents.toString(), 'Hello world and Charlike!')
+    done()
+  })
+})
 
-    stream.end();
-  });
-});
+test('should error if stream', function (done) {
+  plugin(new gutil.File({
+    base: __dirname,
+    path: __dirname + '/package.json',
+    contents: fs.createReadStream('package.json')
+  }), function (err) {
+    test.strictEqual(err.message, 'Streaming not supported')
+    done()
+  })
+})
+
+test('should throw TypeError if `locals` not object', function (done) {
+  function fixture () {
+    octet('foo bar')
+  }
+
+  test.throws(fixture, TypeError)
+  test.throws(fixture, /expect `locals` to be object/)
+  done()
+})

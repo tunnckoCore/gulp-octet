@@ -1,42 +1,37 @@
 {
   "name": "gulp-octet",
   "version": "1.0.1",
-  "description": "Compile octet templates. Gulp plugin for octet - Javascript template engine in just 20 lines - used in AbsurdJS",
+  "description": "Gulp plugin for `octet` - 1kb template engine. Support helpers, partials and more. Used in AbsurdJS apps.",
+  "repository": "tunnckoCore/gulp-octet",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "lint": "jshint index.js && jscs index.js --reporter inline",
-    "test": "mocha",
-    "test-cov": "istanbul cover _mocha",
-    "test-travis": "istanbul cover _mocha --report lcovonly"
-  },
-  "author": {
-    "name": "Charlike Make Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/tunnckoCore/gulp-octet.git"
-  },
-  "keywords": [
-    "gulpplugin",
-    "javascript",
-    "template",
-    "engine",
-    "abusrdjs",
-    "absurd"
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/gulp-octet/blob/master/license.md"
+    "test": "standard && node test.js"
   },
   "dependencies": {
-    "gulp-util": "*",
-    "through2": "*",
-    "octet": "*"
+    "gulp-util": "^3.0.6",
+    "is-real-object": "^1.0.1",
+    "octet": "^3.0.0",
+    "through2": "^2.0.0"
   },
   "devDependencies": {
-    "istanbul-harmony": "^0.3.1",
-    "mocha": "*",
-    "mocha-lcov-reporter": "^0.0.1"
-  }
+    "assertit": "^0.1.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "engine",
+    "es",
+    "es6",
+    "es-template",
+    "es6-template",
+    "gulp",
+    "gulpplugin",
+    "plugin",
+    "template",
+    "tpl",
+    "transform"
+  ]
 }
